@@ -1,0 +1,185 @@
+*{
+	padding:0;
+	margin: 0;
+	box-sizing: border-box; /**/
+}
+
+body {
+ background: #ccc;
+}
+
+.contenedor {
+	
+	background: #F4BBBB;
+	width: 90%;
+	height: 100%;
+	margin: auto;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	                                                          
+	
+	
+}
+
+header {
+	
+	background: #2D747A;
+	width: 100%;
+	display:flex;
+	justify-content: space-between;
+	padding: 20px;
+	align-items: center;
+}
+
+header #logo {
+	
+	color: white;
+	font-size: 30px;
+}
+
+header nav {
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap; /*lo que hace decir es aqui no hay nada, le dice que la opcion del menu tiene un limite toma lo siguiente y dibuja una fila*/ y*/
+	align-items: center; /*no centra los elementos*/
+	
+}
+
+
+	header nav a {
+    background: #FE9A2E;
+    color: white;
+    text-decoration: none;
+    padding: 10px;   /*hace la separacion*/
+	text-align:center;
+	
+
+	}
+	
+	header nav a:hover{ /*el efecto del menu*/
+		background: #F7D358;
+	}
+	
+	.contenido {
+		background: #EFF5FB; /*centra de una sola vez el contenido */
+		padding:20px;
+		flex: 1 1 70%; /*es espacio del contenido es mas extenso y las imagnes de hace a un lado*  0 no marca nada y 1= es el crecimeinto*/
+		
+		
+		
+	}
+	
+	#cont { /* estilo al texto*/
+	top:0px;
+	padding:5px;
+	color:#000000;
+	width:600px;
+	margin-left:25px;
+	overflow:auto;
+    text-align: justify;
+	
+    }
+
+	
+	#cont h1   { 
+	color:#08298A;
+    }
+
+  #cont h2{
+   color:#088A85;
+
+   }
+	
+	
+	aside{
+		flex: 1 1 30%;
+		background: #0B4C5F;
+     	display: flex;	/* necesita ser flexible para adapetarse*/ 
+		flex-wrap: wrap;
+		justify-content: flex-start;  /* cadaa elemento que se ingrese se va a justificar en un inicio */
+	    flex-direction: column; 
+	
+	}
+	
+	aside #widget {
+		height: 150px;
+	    background: #0489B1;
+        margin: 10px;
+		
+       		
+		
+	}
+	
+	
+	aside section #img img { /*tamaño de las imaganes*/
+		
+	  width:300px; 
+	  height:130px;
+	  margin: 10px;
+	 
+		
+		
+	}
+	 
+	 
+	aside section #img img{ /*hacer opaca la imagen ...*/
+	opacity:0.7;
+	filter:alpha(opacity=10);
+    }
+	
+	aside section #img img:hover { /*efecto*/
+		
+		opacity:1.0;
+		filter:alpha(opacity=100);
+		
+	}
+	
+	
+	
+	footer {
+		background:#81BEF7;
+		width:100%;
+		padding: 20px;
+		display:flex;
+		flex-wrap: wrap;
+		justify-content:space-between;
+	}
+	
+	
+	footer .link, .redes {
+		background: #FE9A2E;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	
+	footer .link a, .redes a{
+		
+		text-decoration:none;
+		color: white;
+		padding: 10px;
+		text-align: center;
+	}
+	
+	footer .link a:hover {
+	background:#F7D358;
+	
+	}
+	
+	footer .redes a:hover {
+	background: #F7D358;
+	
+	}
+	@media screen and (max-width:800px){
+	
+	.contenedor{
+	flex-direction:column;
+		
+	}
+   aside{
+	flex-direction: row;
+		
+	}
+	
+	}
